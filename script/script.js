@@ -95,3 +95,41 @@ bici.forEach((el)=>{
 });
 
 console.log(`la bici più leggera è: ${name}, con un peso di: ${peso} kg`);
+
+// esercizio 4
+console.log('................................ESERCIZIO4.............................................................');
+
+const squadre = [
+    {
+        nome:'Inter',
+        puntiFatti:'0',
+        falliSubiti:'0'
+    },
+    {
+        nome:'Milan',
+        puntiFatti:'0',
+        falliSubiti:'0'
+    },
+    {
+        nome:'Juve',
+        puntiFatti:'0',
+        falliSubiti:'0'
+    },
+    {
+        nome:'Roma',
+        puntiFatti:'0',
+        falliSubiti:'0'
+    },
+];
+
+const puntiPerQuadra = [];
+squadre.forEach((squadra)=>{
+    squadra.puntiFatti = randomInteger(0,50);
+    squadra.falliSubiti = randomInteger(0,20);
+    console.log(squadra.nome,squadra.puntiFatti,squadra.falliSubiti);
+    const {nome,puntiFatti} = squadra;
+    puntiPerQuadra.push({nome,puntiFatti});
+})
+
+console.log('');
+console.log(puntiPerQuadra);
