@@ -1,4 +1,5 @@
 //esercizio 1 
+console.log('........................................ESERCIZIO1........................................');
 
 let vip = [ 
     'Brad Pitt',
@@ -23,7 +24,7 @@ const invitati = vip.map((actualVip,i)=>{
 console.log(invitati);
 
 //esercizio 2
-console.log('.......................................................................................');
+console.log('........................................ESERCIZIO2........................................');
 
 const alunni = [
     {
@@ -66,3 +67,31 @@ console.log(over70Grades);
 
 const over120IdOver70Grades = alunni.filter((alunno)=> (alunno.grades > 70) && (alunno.id > 120));
 console.log(over120IdOver70Grades);
+
+// esercizio 3
+console.log('................................ESERCIZIO3.............................................................');
+
+const bici =[
+    {
+        name: 'pippo',
+        peso:10
+    },
+    {
+        name: 'pluto',
+        peso:15,
+    },
+    {
+        name: 'paperino',
+        peso:5
+    }
+];
+
+let {name,peso}=bici[0];
+bici.forEach((el)=>{
+    if(peso>el.peso){
+        name = el.name;
+        peso = el.peso;
+    }
+});
+
+console.log(`la bici più leggera è: ${name}, con un peso di: ${peso} kg`);
